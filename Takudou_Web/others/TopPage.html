@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<!--タグの大文字小文字は問わない-->
+	<head>
+		<!--閉じタグなし。文字コード指定の決まり文句-->
+		<meta charset="UTF-8">
+
+		<!--ページの内容。検索時のキーワード-->
+		<meta name="description" content="あへあへ">
+
+		<!--タブのタイトルになる-->
+		<title>HELLO WORLD</title>
+
+		<!--スタイルタグでスタイルシートを中に書ける-->
+		<style>
+			p{color: red;}
+		</style>
+
+		<!--スタイルシートをhtmlに反映させる方法。-->
+		<link rel="stylesheet" href="dropmenu.css">
+
+		<!--タブのタイトルの横に出るアイコンを埋め込む-->
+		<link rel="shortcut icon" href="favicon.ico">
+
+		<!--scriptタグは閉じタグあり
+		<script src="myscript.js"></script>
+		-->
+
+	</head>
+
+	<body>
+		<!--見出しの大きさ。h1~6-->
+		<h1>大見出しやでw</h1>
+		<!--ページの中に水平線を引ける-->
+		<hr>
+
+		<ul id="dropmenu">
+			<li><a href="./schedule/index.html">スケジュール</a>
+					<ul>
+								<li><a href="schedule/2013-10.html">10月</a></li>
+											<li><a href="schedule/2013-11.html">11月</a></li>
+													</ul>
+														</li>
+															<li><a href="http://bbs7.fc2.com/php/e.php/undokai-takkyu/">掲示板</a>
+																</li>
+																	<li><a href="./link/index.html">リンク</a>
+																			<ul>
+																						<li><a href="http://www.akamontt.com/" target="blank">赤門卓球倶楽部</a></li>
+																									<li><a href="http://utttcgirls.hotcom-web.com/wordpress/" target="blank">女子部HP</a></li>
+																											</ul>
+																												</li>
+																													<li><a href="./result/index.html">試合結果</a>
+																														</li>
+																														</ul>
+<a class="twitter-timeline" href="https://twitter.com/maruju_fav" data-widget-id="427972370024771585">@maruju_fav からのツイート</a>
+<script>
+!function(d,s,id){
+	var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+	if(!d.getElementById(id)){
+		js=d.createElement(s);
+		js.id=id;
+		js.src=p+"://platform.twitter.com/widgets.js";
+		fjs.parentNode.insertBefore(js,fjs);
+	}
+}
+(document,"script","twitter-wjs");
+</script>
+
+
+
+
+		<!--href="#~~"で、~~にページ内リンクを貼れる。
+				リンク先にはaタグでid="~~"とする。-->
+			<h2>小見出しw</h2><a href="#ngo">ngo</a>
+
+				<!--パラグラフ生成。brで改行。strongタグで強調-->
+				<p><strong>こんに<br>ちは</strong>みなさん</p>
+
+				<!--画像挿入はimgタグ。
+				画像は同じディレクトリに入れておいた方がいいかも。
+				alt属性は音声読み上げブラウザなどで画像が表示されない時のもの。
+				title属性は、カーソルを画像の上に持って行くと、それが表示される。-->
+				<img src="pingpong.jpg" width="240" height="140" alt="いなづまhshs" title="pingpong">
+
+				<!--リンクはアンカータグ<a href=""></a>でやる。
+				target="_blank"とすると別ウインドウでリンクが開かれる。-->
+				<p>卓同webは<a href="http://www.symphonic-net.com/tsukubattc/" target="_blank">こちら</a>！</p>
+				<p>卓球画像は<a href="http://nagono.vsol.jp/images/CIMG0334c.JPG" target="_blank">こちら</a></p>
+				<img src="pingpong.jpg" width="240" height="140" alt="いなづまhshs">
+
+				<!--ulタグはUnordered Listの略で番号なしリスト。
+				liタグはList Itemでリスト内の要素であることを示す。-->
+				<p>Web担当は</p>
+				<ul>
+					<li>丸山</li>
+					<a id="ngo"><li>長尾</li></a>
+				</ul>
+				<!--olタグはOrdered Listで番号付きリスト-->
+				<p>強さ順で並べると</p>
+				<ol>
+					<li>伊藤</li>
+					<li>大山</li>
+					<li>高橋</li>
+				</ol>
+				<p>学祭商品</p>
+				<!--tableタグで表組みができる
+				内部でtheadタグとtbodyタグを指定。
+				thead -> 表のヘッダーをthタグで指定。
+				tbody -> 表のデータ部分を指定。
+
+				tr: table row
+				th: table header
+				td: table data-->
+				<table>
+					<thead>
+							<tr><th>商品名</th><th>料金</th><th>所要時間</th></tr>
+					</thead>
+						<tbody>
+							<tr><td>知的好奇心マン焼き</td><td>150</td><td>3</td></tr>
+							<tr><td>紅ショウガ焼き</td><td>300</td><td>5</td></tr>
+							<tr><td>アンパンマン焼き</td><td>100</td><td>80</td></tr>
+						</tbody>
+				</table>
+
+				<!--formタグはユーザーからの入力を受け付ける時の入力部品。
+				actionはフォームで入力されたデータをどのプログラムに送るか
+				methodはpostとgetがある。-->
+				<form action="survey.php" method="post">
+					<!--name属性でsurvey.phpに送るデータに名前をつける。
+					sizeで大きさ、maxlengthで最大文字数を指定-->
+					<p>名前：<input type="text" name="name" size="60" maxlength="5"></p>
+					<!--inputが複数行になる場合は、textareaを使う
+					textareaは閉じタグが必要だから注意-->
+					<p>メモ：<textarea name="memo"></textarea></p>
+					<!--passwordにすると、入力文字が伏せ字になる。-->
+					<p>パスワード：<input type="password" name="password"></p>
+					<!--hiddenで表示しなくてもいい情報を用意しておける。
+					user_idという名前で32がsurvey.phpに送られる。-->
+					<p><input type="hidden" name="user_id" value="32"></p>
+					<!--日付を入力する。日付以外のものはエラーが出る-->
+					<p>日付：<input type="date" name="birthday"></p>
+					<!--URLやemailの入力もできる。
+					requiredにすると、何も入力されていないとエラーが出る-->
+					<p>URL:<input type="url" name="url"></p>
+					<p>email:<input type="email" name="email" required></p>
+
+					<!--radioで１つしか選択できないラヂオボタンが作成される
+					labelタグを使うと、ボタンを押さなくてもRedの文字を押しただけで
+					チェックがつく-->
+					<p>Colors:
+					<label><input type="radio" name="color" value="red">Red</label>
+					<!--label forはinputとラベルの名前が離れたりする場合に用いる。
+					これと上は同義である。-->
+					<input type="radio" name="color" value="blue" id="blue"><label for="blue">Blue</label>
+					<input type="radio" name="color" value="green">Green
+					</p>
+
+					<p>Colors2:
+					<input type="checkbox" name="color" value="red">Red
+					<input type="checkbox" name="color" value="blue">Blue
+					<input type="checkbox" name="color" value="green">Green
+					</p>
+
+					<!--selectタグはセレクトボックスが現れる。
+					中身はoptionタグで指定する。
+					sizeを指定すると、セレクトボックスの縦が伸びる。
+					multipleでcommand+選択で複数選択が可能になる-->
+					<select name="color" size="5" multiple>
+						<option value="red">Red</option>
+						<option value="blue">Blue</option>
+						<option value="green">Green</option>
+					</select>
+
+
+					<!--送信ボタンの作成-->
+					<p><input type="submit" value="送信"></p>
+				</form>
+
+					<!--
+					スタイリング
+						div:汎用ブロック要素(前後に改行が入る)
+						span:汎用インライン要素(前後に改行が入らない)
+
+						id:その文書に一つだけの要素
+						class:複数あってもよい
+						スタイルシートを学べば、よさがわかる
+					-->
+					<div id = main>
+					<p>こんにちは<span class="notice">こんにちは</span></p>
+					<p>こんにちは</p>
+					</div>
+
+					<!--
+					文書の構造
+					header
+					footer
+					nav(navigation)
+					article
+					aside:副次的な情報
+					section
+					-->
+					<header>
+						<h1>卓同日記</h1>
+						<nav>
+							home
+							profile
+						<nav>
+					</header>
+
+					<article>
+						<h2>卓球屋完了！</h2>
+						<p>うれしい！</p>
+					<article>
+
+					<aside>
+						<h3>このサイトについて</h3>
+						<p>maruju_favの卓同日記です</p>
+					</aside>
+
+					<footer>
+						copyright 2013 maruju_fav
+					</footer>
+
+					<!--
+					実体参照
+						これは<p>です。と書きたい場合に普通に書くとpタグとして解釈されてしまうが、
+						&lt;(less than)と、&gt:(grater than)を使えば表示できる。
+
+					style属性
+						ほぼ全ての要素につけることができて、
+						スタイルシートの表記を試すことができる。
+
+					script
+						jsを読み込む時に使う。通常はbodyタグの直前に書く。
+						（scriptタグの処理中はhtmlの読み込みはストップする）
+					-->
+					<p>これは&lt;p&gt;タグです</p>
+					<p style="color:red;">こんにちわん</p>
+					<script src="myscript.js"></script>
+	</body>
+
+</html>
